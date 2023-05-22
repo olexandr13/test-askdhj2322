@@ -1,0 +1,19 @@
+{
+  "name": "publishing-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olexandr13/test-askdhj2322.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olexandr13/test-askdhj2322/issues"
+  },
+  "homepage": "https://github.com/olexandr13/test-askdhj2322#readme"
+}
