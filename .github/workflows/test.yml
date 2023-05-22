@@ -15,10 +15,11 @@ jobs:
     - run: npm i
     - run: git config --global user.name "GitHub CD bot"
     - run: git config --global user.email "github-cd-bot@example.com"        
-    - run: npm version ${{ github.event.release.tag_name }}      
+    - run: npm version $(echo "${{ github.event.release.tag_name }}" | awk -F '@' '{ print $1 }')
     - uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
+        tag: ${{ contains(github.event.release.tag_name, 'beta') && 'beta' || 'latest' }}
 
     # push the version changes to GitHub
     - run: git push
